@@ -1,0 +1,21 @@
+------------------------------------------------------------------------
+input:	USB serial from arduino (Lmin, Lmax, Lmean, Llast, fMd)
+------------------------------------------------------------------------
+output:	stereo audio signal
+------------------------------------------------------------------------
+function for Max/MSP setup:
+	
+	calculate modulation depth with MD=(Lmax-Lmin)/(Lmax+Lmin)*100%
+	calculate lux values with lx=measurements*0.9765625
+
+function loop
+
+	melody: MD mapped to key, tonality and the number of available notes 
+
+	rhythm: fMd mapped to time between the tones
+
+	character: Lmin, Lmax and Lmean mapped to the wave form
+
+	room: MD mapped to the lowpass filter and the echo
+
+end loop
