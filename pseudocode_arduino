@@ -1,0 +1,23 @@
+------------------------------------------------------------------------
+input:	voltage readings of lightsensor on A0
+------------------------------------------------------------------------
+output:	mininum and maximum of measurements (Lmin, Lmax), 
+	mean of light intensety measurements (Lmean), 
+	last measurement (Llast),
+	median of calculated flicker frequencies (fMd)
+------------------------------------------------------------------------
+function for arduino setup
+
+function loop
+
+	save 300 measurements
+	calculate mean, mininum and maximum of 300 measurements
+
+	determine location on cycle of measuremnt series
+	determine cycle length
+	calculate frequency with f=1/T where T is the cycle length and f is the frequency
+	save 300 frequency samples 
+	calculate median of 300 frequency samples (fMd)
+
+
+end loop
